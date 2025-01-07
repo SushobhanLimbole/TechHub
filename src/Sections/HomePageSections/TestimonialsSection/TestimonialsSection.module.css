@@ -1,0 +1,73 @@
+.testimonials {
+  width: 80vw;
+  margin: 20vh auto;
+  padding: 3% 5%;
+}
+
+.cursorColor {
+  background: var(--blue-glow);
+}
+
+.testimonialsHeader {
+  text-align: center;
+  font-family: 'Open Sans',serif;
+  color: var(--title-color);
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.tagline{
+  text-align: center;
+  font-family: 'Open Sans',serif;
+  font-weight: 400;
+  color: var(--tagline-color);
+  margin-bottom: 60px;
+}
+
+.borderTop {
+  border-top: 2px solid;
+  border-top-color: var(--border-blue);
+}
+
+.borderBottom {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--border-blue);
+}
+
+.borderLeft {
+  border-left: 2px solid;
+  border-left-color: var(--border-blue);
+}
+
+.borderRight {
+  border-right: 2px solid;
+  border-right-color: var(--border-blue);
+}
+
+.borderTopLeft {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-color: var(--border-blue);
+  border-left-color: var(--border-blue);
+}
+
+.borderTopRight {
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-top-color: var(--border-blue);
+  border-right-color: var(--border-blue);
+}
+
+.borderBottomLeft {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-bottom-color: var(--border-blue);
+  border-left-color: var(--border-blue);
+}
+
+.borderBottomRight {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-bottom-color: var(--border-blue);
+  border-right-color: var(--border-blue);
+}

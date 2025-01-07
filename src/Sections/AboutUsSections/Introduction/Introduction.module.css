@@ -1,0 +1,143 @@
+.introductionSection {
+  width: 80vw;
+  padding: 3% 5%;
+  margin: 10vh auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.blueGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  z-index: -3;
+  filter: blur(100px);
+  background: var(--blue-glow);
+}
+
+.pinkGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: -7%;
+  top: -15%;
+  z-index: -3;
+  filter: blur(100px);
+  background: var(--pink-glow);
+}
+
+.leftStars {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: -8%;
+  top: -15%;
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.rightStars {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.profilePhoto {
+  height: 70vh;
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.card {
+  width: 30%;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(to bottom, #e6b7fe, #5049c2 20%, #5993d4);
+  z-index: -2;
+  filter: blur(15px); /* Blurs the shadow to make it realistic */
+  border-radius: 15px; /* Matches the box's rounded corners */
+  animation: GlowAnimate 2s infinite ease-in-out;
+}
+
+.intro {
+  width: 65%;
+  /* background-color: bisque; */
+}
+
+.socialMedia {
+  display: flex;
+  align-items: end;
+  margin: 2vh 0;
+}
+
+.socialMedia h3 {
+  font-family: "Diphylleia", serif;
+  display: inline;
+  color: var(--title-color);
+  margin-right: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.socialMedia img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.intro h1 {
+  color: var(--title-color);
+  font-size: 4rem;
+  font-family: "Open Sans", serif;
+}
+
+.intro p {
+  color: var(--title-color);
+  font-size: 1.6rem;
+  word-spacing: 0.2rem;
+  font-family: "Open Sans", serif;
+}
+
+@keyframes GlowAnimate {
+  0% {
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    filter: blur(10px);
+  }
+  50% {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    filter: blur(20px);
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    filter: blur(10px);
+  }
+}

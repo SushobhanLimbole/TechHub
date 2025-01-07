@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.975);
+  justify-content: space-between;
+  font-family: "Open Sans", serif;
+}
+
+.logo {
+  height: 40px;
+  width: 130px;
+  background-image: url('../../Assets/logo_codex.png');
+  background-size: cover;
+  /* background-color: antiquewhite; */
+  /* background-position: center; */
+}
+
+.navContent {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.navLinks {
+  list-style: none;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  margin: 0 2.5rem;
+  font-size: 1.8rem;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover{
+  color: #e6b7fe;
+}

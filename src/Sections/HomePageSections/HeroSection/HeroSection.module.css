@@ -1,0 +1,62 @@
+.heroSection {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.heroBlueGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  z-index: -3;
+  filter: blur(100px);
+  background: var(--blue-glow);
+}
+
+.heroStars {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.tagSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.tagline {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.tagline h1 {
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 5.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  /* background-color: tan; */
+}
+
+.tagline h2 {
+  font-family: "Open Sans", serif;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.674);
+  /* background-color: aliceblue; */
+}

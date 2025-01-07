@@ -1,0 +1,59 @@
+.footer {
+  padding: 8vh 0;
+  background-color: rgb(32, 35, 41);
+}
+
+.innerFooterSection {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footerLogo {
+  height: 40px;
+  width: 130px;
+  object-fit: cover;
+}
+
+.quickLinks h1 {
+  color: var(--title-color);
+}
+
+.quickLinks ul {
+  padding-left: 0;
+  margin-top: 0.8rem;
+}
+
+.quickLinks ul li {
+  list-style: none;
+  margin-bottom: 0.35rem;
+}
+
+.quickLinks ul li a {
+  text-decoration: none;
+  color: var(--tagline-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contactColumn h1 {
+  color: var(--title-color);
+}
+
+.mailLogo {
+  height: 1.8rem;
+  width: 1.8rem;
+  fill: var(--tagline-color);
+}
+
+.contactColumn a {
+  text-decoration: none;
+  color: var(--tagline-color);
+  font-size: 1.8rem;
+}
+
+.copyright {
+  margin-top: 10vh;
+  text-align: center;
+  color: var(--title-color);
+}

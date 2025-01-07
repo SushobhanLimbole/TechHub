@@ -1,0 +1,120 @@
+.contactUs {
+  width: 80vw;
+  margin: 20vh auto;
+  padding: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cursorColor {
+  background: radial-gradient(var(--border-green), transparent, transparent);
+}
+
+.contactUsHeader {
+  text-align: center;
+  font-family: "Open Sans", serif;
+  color: var(--title-color);
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  text-align: center;
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  color: var(--tagline-color);
+  margin-bottom: 60px;
+}
+
+.map {
+  width: 50vw;
+  height: 40vh;
+  border-radius: 15px;
+}
+
+.contentContainer {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1vw;
+}
+
+.content {
+  width: 49%;
+  padding: 1.5vh 1.2vw;
+  background-color: rgba(255, 255, 255, 0.121);
+  border-radius: 15px;
+}
+
+.content h1 {
+  color: var(--title-color);
+}
+
+.email {
+  color: var(--tagline-color);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.call{
+    color: var(--tagline-color);
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.mailLogo,
+.callLogo {
+  height: 3rem;
+  width: 3rem;
+  fill: var(--tagline-color);
+}
+
+.borderTop {
+  border-top: 2px solid;
+  border-top-color: var(--border-green);
+}
+
+.borderBottom {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--border-green);
+}
+
+.borderLeft {
+  border-left: 2px solid;
+  border-left-color: var(--border-green);
+}
+
+.borderRight {
+  border-right: 2px solid;
+  border-right-color: var(--border-green);
+}
+
+.borderTopLeft {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-color: var(--border-green);
+  border-left-color: var(--border-green);
+}
+
+.borderTopRight {
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-top-color: var(--border-green);
+  border-right-color: var(--border-green);
+}
+
+.borderBottomLeft {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-bottom-color: var(--border-green);
+  border-left-color: var(--border-green);
+}
+
+.borderBottomRight {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-bottom-color: var(--border-green);
+  border-right-color: var(--border-green);
+}

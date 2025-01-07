@@ -1,0 +1,80 @@
+.quoteSection {
+  width: 80vw;
+  padding: 3% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15vh auto;
+  position: relative;
+}
+
+.blueGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  right: -5%;
+  z-index: -3;
+  filter: blur(100px);
+  background: var(--blue-glow);
+}
+
+.pinkGlow {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: -10%;
+  /* top: -15%; */
+  z-index: -3;
+  filter: blur(120px);
+  background: var(--pink-glow);
+}
+
+.leftStars {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: -8%;
+  /* top: -15%; */
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.quote {
+  width: 60%;
+}
+
+.quote h1 {
+  font-family: "Open Sans", serif;
+  font-size: 3.5rem;
+  color: rgb(245, 207, 128);
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.quote h3 {
+    font-family: "Open Sans", serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--title-color);
+    word-spacing: 0.3rem;
+    font-weight: 400;
+}
+
+.pic {
+    width: 30%;
+    height: 35vh;
+    object-fit: contain;
+    position: relative;
+    animation: ScaleAnimate 1.5s infinite ease-in-out;
+}
+
+@keyframes ScaleAnimate {
+    0%, 100% {
+        transform: scale(0.9); 
+    } 
+    50% {
+        transform: scale(1); 
+    }
+}

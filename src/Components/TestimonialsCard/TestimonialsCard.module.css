@@ -1,0 +1,33 @@
+.testimonialsCard{
+    height: 90%;
+    width: 30%;
+    /* border: 2px solid red; */
+}
+
+.testimonialsCardHeader {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonialsCardHeader img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.testimonialsCardHeader h2{
+    width: 85%;
+    color: var(--title-color);
+    font-family: "Open Sans", serif;
+    font-size: 2rem;
+}
+
+.testimonialsCard p{
+    font-family: "Open Sans", serif;
+    color: var(--title-color);
+    font-size: 1.25rem;
+}

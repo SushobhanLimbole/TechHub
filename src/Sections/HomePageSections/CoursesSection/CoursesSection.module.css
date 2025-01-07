@@ -1,0 +1,82 @@
+.courses {
+  width: 80vw;
+  margin: 20vh auto;
+  padding: 3% 5%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursorColor {
+  background: var(--pink-glow);
+}
+
+.coursesHeader {
+  text-align: center;
+  font-family: "Open Sans", serif;
+  color: var(--title-color);
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  text-align: center;
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  color: var(--tagline-color);
+  margin-bottom: 60px;
+}
+
+.coursesSlider {
+  height: 60vh;
+  width: 50vw;
+}
+
+.borderTop {
+  border-top: 2px solid;
+  border-top-color: var(--border-purple);
+}
+
+.borderBottom {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--border-purple);
+}
+
+.borderLeft {
+  border-left: 2px solid;
+  border-left-color: var(--border-purple);
+}
+
+.borderRight {
+  border-right: 2px solid;
+  border-right-color: var(--border-purple);
+}
+
+.borderTopLeft {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-color: var(--border-purple);
+  border-left-color: var(--border-purple);
+}
+
+.borderTopRight {
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-top-color: var(--border-purple);
+  border-right-color: var(--border-purple);
+}
+
+.borderBottomLeft {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-bottom-color: var(--border-purple);
+  border-left-color: var(--border-purple);
+}
+
+.borderBottomRight {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-bottom-color: var(--border-purple);
+  border-right-color: var(--border-purple);
+}
