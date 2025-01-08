@@ -1,4 +1,5 @@
-import logo from '../../../Assets/logo_codex.png';
+import { Link } from 'react-router-dom';
+import logo from '../../../Assets/tech-hub.png';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,11 +10,11 @@ export default function Footer() {
                 <div className={styles.quickLinks}>
                     <h1>Quick Links</h1>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Courses</a></li>
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><a href="#courses">Courses</a></li>
                         <li><a href="/">Enquiry</a></li>
-                        <li><a href="/">About Us</a></li>
-                        <li><a href="/">Contact Us</a></li>
+                        <li><Link to={'/about-us'}>About Us</Link></li>
+                        <li><a href="/#contact-us">Contact Us</a></li>
                     </ul>
                 </div>
                 <div className={styles.contactColumn}>

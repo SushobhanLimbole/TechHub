@@ -65,6 +65,7 @@ export default function ContactUs() {
 
     return (
         <div
+            id="contact-us"
             className={`${styles.contactUs} cursor-section`}
             ref={containerRef}
             onMouseMove={(e) => handleMouseMove(e, containerRef, cursorRef)}

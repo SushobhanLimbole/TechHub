@@ -10,12 +10,12 @@ export default function FeaturesSection() {
             <div className={styles.features}>
                 <h1>What we Offer?</h1>
                 <ul>
-                    <li><span>Simplified Learning:</span> Focused on breaking down complex concepts into easily understandable lessons.</li>
-                    <li><span>Practical Exposure:</span> Gain real-world expertise with hands-on projects.</li>
-                    <li><span>Personalized Growth:</span> Focused mentoring to unlock individual potential.</li>
-                    <li><span>Expert Insights:</span> Learn from industry experiences shared by our founder.</li>
-                    <li><span>Industry-Ready Training:</span> Prepare for real-world professional excellence.</li>
-                    <li><span>Value for money:</span> Technology Hub offers high-quality IT training at an affordable price.</li>
+                    <div className={styles.content}><li><span>Simplified Learning:</span> Master complex concepts through an intuitive approach</li></div>
+                    <div className={styles.content}><li><span>Practical Exposure:</span> Gain real-world expertise with hands-on projects.</li></div>
+                    <div className={styles.content}><li><span>Personalized Growth:</span> Focused mentoring to unlock individual potential.</li></div>
+                    <div className={styles.content}><li><span>Expert Insights:</span> Learn from industry experiences shared by our founder.</li></div>
+                    <div className={styles.content}><li><span>Industry-Ready Training:</span> Prepare for real-world professional excellence.</li></div>
+                    <div className={styles.content}><li><span>Value for money:</span> Technology Hub offers high-quality IT training at an affordable price.</li></div>
                 </ul>
             </div>
             <img className={styles.pic} src={aimPic} alt='features'/>

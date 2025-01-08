@@ -12,12 +12,10 @@
 }
 
 .logo {
-  height: 40px;
-  width: 130px;
-  background-image: url('../../Assets/logo_codex.png');
+  height: 5vh;
+  width: 10vw;
+  background-image: url('../../Assets/tech-hub.png');
   background-size: cover;
-  /* background-color: antiquewhite; */
-  /* background-position: center; */
 }
 
 .navContent {

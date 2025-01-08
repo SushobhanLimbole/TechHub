@@ -68,6 +68,7 @@ export default function Testimonials() {
 
   return (
     <div
+      id="testimonials"
       className={`${testimonialsStyles.testimonials} cursor-section`}
       ref={containerRef}
       onMouseMove={(e) => handleMouseMove(e, containerRef, cursorRef)}

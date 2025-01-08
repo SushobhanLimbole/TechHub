@@ -44,24 +44,36 @@
 
 .features {
   width: 50%;
+  background-color: rgba(255, 255, 255, 0.055);
+  padding: 2%;
+  border-radius: 25px;
 }
 
 .features h1 {
   font-family: "Open Sans", serif;
-  font-size: 3.8rem;
-  /* color: var(--title-color); */
+  font-size: 3.5rem;
   color: rgb(245, 207, 128);
   margin-bottom: 3vh;
 }
 
+/* .content {
+  padding: 0.5% 1.5%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  margin-bottom: 2.5vh;
+} */
+
 .features ul li {
-    list-style: none;
-    margin-bottom: 2vh;
+    margin-bottom: 2.5vh;
     font-family: "Open Sans", serif;
     font-size: 1.8rem;
     color: var(--title-color);
     word-spacing: 0.3rem;
     font-weight: 500;
+}
+
+.features ul li::marker {
+  color: rgb(245, 207, 128);
 }
 
 .features ul span {

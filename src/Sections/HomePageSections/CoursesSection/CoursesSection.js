@@ -66,6 +66,7 @@ export default function Courses({ images }) {
 
     return (
         <div
+            id="courses"
             className={`cursor-section ${styles.courses}`}
             ref={containerRef}
             onMouseMove={(e) => handleMouseMove(e, containerRef, cursorRef)}

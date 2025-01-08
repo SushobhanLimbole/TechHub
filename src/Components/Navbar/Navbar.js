@@ -9,7 +9,7 @@ export default function Navbar() {
                 <li className={navbarStyles.navLinks}><Link to={'/courses'}>Courses</Link></li>
                 <li className={navbarStyles.navLinks}><Link to={'/'}>Enquiry</Link></li>
                 <li className={navbarStyles.navLinks}><Link to={'/about-us'}>About Us</Link></li>
-                <li className={navbarStyles.navLinks}><Link to={'/'}>Contact Us</Link></li>
+                <li className={navbarStyles.navLinks}><a href='/#contact-us'>Contact Us</a></li>
             </ul>
         </div>
     );
