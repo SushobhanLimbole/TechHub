@@ -17,6 +17,7 @@
 
 .quickLinks h1 {
   color: var(--title-color);
+  font-family: 'Open Sans',serif;
 }
 
 .quickLinks ul {
@@ -34,10 +35,12 @@
   color: var(--tagline-color);
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  font-family: 'Open Sans',serif;
 }
 
 .contactColumn h1 {
   color: var(--title-color);
+  font-family: 'Open Sans',serif;
 }
 
 .mailLogo {
@@ -50,10 +53,12 @@
   text-decoration: none;
   color: var(--tagline-color);
   font-size: 1.8rem;
+  font-family: 'Open Sans',serif;
 }
 
 .copyright {
   margin-top: 10vh;
   text-align: center;
   color: var(--title-color);
+  font-family: 'Open Sans',serif;
 }

@@ -1,0 +1,103 @@
+.introSection {
+  width: 95vw;
+  padding: 1.5rem;
+  margin: 2vh auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.055);
+}
+
+.blueGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  z-index: -3;
+  filter: blur(80px);
+  background: var(--blue-glow);
+}
+
+.pinkGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  z-index: -3;
+  filter: blur(90px);
+  background: var(--pink-glow);
+}
+
+.leftStars {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  width: 32vw;
+  height: 40vh;
+  background-color: rgba(54, 72, 159, 0.525);
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.intro {
+  width: 60%;
+  padding: 0 0.5vw;
+  /* background-color: yellowgreen; */
+}
+
+.title {
+  font-family: "Open Sans", serif;
+  font-weight: 700;
+  color: var(--title-color);
+  font-size: 4rem;
+  /* margin-bottom: 3vh; */
+}
+
+.intro h4 {
+  font-family: "Open Sans", serif;
+  /* font-weight: 700; */
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1.8rem;
+  margin: 1.5vh 0;
+}
+
+.price {
+  font-family: "Open Sans", serif;
+  font-weight: 700;
+  color: var(--title-color);
+  font-size: 3.5rem;
+  margin-bottom: 1.5vh;
+}
+
+.intro p {
+  font-family: "Open Sans", serif;
+  color: var(--title-color);
+  font-size: 1.7rem;
+  margin-bottom: 1.5vh;
+}
+
+.enquiry {
+  padding: 1.2vh 1.5vw;
+  font-family: "Open Sans", serif;
+  font-weight: 500;
+  color: var(--title-color);
+  font-size: 1.8rem;
+  background-color: #1675f2;
+  border: 2px solid #1675f2;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.enquiry:hover {
+  background-color: transparent;
+}
