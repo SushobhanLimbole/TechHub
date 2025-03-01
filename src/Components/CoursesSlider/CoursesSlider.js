@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import styles from './CoursesSlider.module.css';
+import { useNavigate } from "react-router-dom";
 
 export default function CoursesSlider({images}) {
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const intervalRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) =>
@@ -30,6 +33,10 @@ export default function CoursesSlider({images}) {
         return () => stopAutoSlide(); // Cleanup on unmount
     }, []);
 
+    function handleNavigation() {
+        navigate('/courses');
+    }
+
     return (
         <div
             className={styles.carousel}
@@ -50,7 +57,7 @@ export default function CoursesSlider({images}) {
                             }`}
                         aria-hidden={index !== currentIndex}
                     >
-                        <img src={url} alt={`Slide ${index + 1}`} />
+                        <img src={url} alt={`Slide ${index + 1}`} onClick={handleNavigation}/>
                     </div>
                 ))}
             </div>

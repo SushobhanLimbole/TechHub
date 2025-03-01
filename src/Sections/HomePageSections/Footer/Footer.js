@@ -11,10 +11,10 @@ export default function Footer() {
                     <h1>Quick Links</h1>
                     <ul>
                         <li><Link to={'/'}>Home</Link></li>
-                        <li><a href="#courses">Courses</a></li>
+                        <li><Link to={"/"} onClick={() => document.querySelector('#courses')?.scrollIntoView({ behavior: 'smooth' })}>Courses</Link></li>
                         <li><a href="/">Enquiry</a></li>
                         <li><Link to={'/about-us'}>About Us</Link></li>
-                        <li><a href="/#contact-us">Contact Us</a></li>
+                        <li><Link to={"/"} onClick={() => document.querySelector('#contact-us-id')?.scrollIntoView({ behavior: 'smooth' })}>Contact Us</Link></li>
                     </ul>
                 </div>
                 <div className={styles.contactColumn}>

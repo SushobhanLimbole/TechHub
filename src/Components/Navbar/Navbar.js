@@ -34,10 +34,10 @@ export default function Navbar() {
                             <Link to={'/'}><div className={styles.logo}></div></Link>
                         </div>
                         <ul className={styles.navLinks}>
-                            <li><Link to={"/courses"}>Courses</Link></li>
+                            <li><Link to={"/"} onClick={() => document.querySelector('#courses')?.scrollIntoView({ behavior: 'smooth' })}>Courses</Link></li>
                             <li><Link to={"/"}>Enquiry</Link></li>
                             <li><Link to={"/about-us"}>About Us</Link></li>
-                            <li><Link to={"/#contact-us"}>Contact Us</Link></li>
+                            <li><Link to={"/"} onClick={() => document.querySelector('#contact-us-id')?.scrollIntoView({ behavior: 'smooth' })}>Contact Us</Link></li>
                         </ul>
                     </nav>
             }
