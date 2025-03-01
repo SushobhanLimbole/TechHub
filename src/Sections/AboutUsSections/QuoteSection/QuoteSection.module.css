@@ -6,6 +6,7 @@
   align-items: center;
   margin: 15vh auto;
   position: relative;
+  flex-wrap: wrap; 
 }
 
 .blueGlow {
@@ -23,7 +24,6 @@
   width: 60%;
   position: absolute;
   left: -10%;
-  /* top: -15%; */
   z-index: -3;
   filter: blur(120px);
   background: var(--pink-glow);
@@ -34,7 +34,6 @@
   width: 60%;
   position: absolute;
   left: -8%;
-  /* top: -15%; */
   z-index: -2;
   background-image: url("../../../Assets/stars.png");
   background-size: cover;
@@ -54,27 +53,108 @@
 }
 
 .quote h3 {
-    font-family: "Open Sans", serif;
-    font-size: 1.8rem;
-    text-align: center;
-    color: var(--title-color);
-    word-spacing: 0.3rem;
-    font-weight: 400;
+  font-family: "Open Sans", serif;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--title-color);
+  word-spacing: 0.3rem;
+  font-weight: 400;
 }
 
 .pic {
-    width: 30%;
-    height: 35vh;
-    object-fit: contain;
-    position: relative;
-    animation: ScaleAnimate 1.5s infinite ease-in-out;
+  width: 30%;
+  height: 35vh;
+  object-fit: contain;
+  position: relative;
+  animation: ScaleAnimate 1.5s infinite ease-in-out;
 }
 
+
 @keyframes ScaleAnimate {
-    0%, 100% {
-        transform: scale(0.9); 
-    } 
-    50% {
-        transform: scale(1); 
-    }
+  0%, 100% {
+    transform: scale(0.9); 
+  } 
+  50% {
+    transform: scale(1); 
+  }
+}
+
+@media (max-width: 1024px) {
+  .quoteSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .quote {
+    width: 90%;
+  }
+
+  .quote h1 {
+    font-size: 3rem;
+  }
+
+  .quote h3 {
+    font-size: 1.6rem;
+  }
+
+  .pic {
+    width: 20%;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .rightStars {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    right: -8%;
+    top: -30%;
+    z-index: -2;
+    background-image: url("../../../Assets/stars.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blueGlow {
+    top: -20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote h1 {
+    font-size: 2.5rem;
+  }
+
+  .quote h3 {
+    font-size: 1.4rem;
+  }
+
+  .pic {
+    width: 30%;
+  }
+
+  .pinkGlow,
+  .blueGlow {
+    filter: blur(80px);
+  }
+}
+
+@media (max-width: 480px) {
+  .quote h1 {
+    font-size: 2rem;
+  }
+
+  .quote h3 {
+    font-size: 1.2rem;
+  }
+
+  .pic {
+    width: 40%;
+  }
+
+  .pinkGlow,
+  .blueGlow {
+    filter: blur(70px);
+  }
 }

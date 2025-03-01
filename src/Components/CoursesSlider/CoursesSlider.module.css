@@ -43,9 +43,9 @@
   right: -1px;
   bottom: -1px; */
   background: linear-gradient(to bottom, #e6b7fe, #5049c2 20%, #5993d4);
-  z-index: -2; /* Push shadow behind the box */
-  filter: blur(15px); /* Blurs the shadow to make it realistic */
-  border-radius: 15px; /* Matches the box's rounded corners */
+  z-index: -2;
+  filter: blur(15px);
+  border-radius: 15px;
   animation: GlowAnimate 2s infinite ease-in-out;
 }
 
@@ -80,6 +80,57 @@
   opacity: 0;
   z-index: 0;
 }
+
+@media only screen and (max-width: 850px) {
+
+  .card {
+    width: 40%;
+  }
+
+  .card.active {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .card.next {
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .card.prev {
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .card.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .card {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 65%;
+  }
+}
+
+
 
 @keyframes GlowAnimate {
   0% {

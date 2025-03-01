@@ -1,10 +1,12 @@
 .introSection {
   width: 95vw;
+  height: fit-content;
   padding: 1.5rem;
   margin: 2vh auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  align-items: stretch;
   position: relative;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.055);
@@ -44,6 +46,8 @@
 .card {
   width: 32vw;
   height: 40vh;
+  /* height: inherit; */
+  flex-grow: 1;
   background-color: rgba(54, 72, 159, 0.525);
   border-radius: 15px;
   object-fit: cover;
@@ -100,4 +104,105 @@
 
 .enquiry:hover {
   background-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .introSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    width: 90vw;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    margin-bottom: 2vh;
+  }
+
+  .intro {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .intro h4 {
+    font-size: 1.6rem;
+  }
+
+  .price {
+    font-size: 3rem;
+  }
+
+  .intro p {
+    font-size: 1.6rem;
+  }
+
+  .enquiry {
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .introSection {
+    width: 95vw;
+    padding: 1.5rem;
+  }
+
+  /* .card {
+    width: 90%;
+  } */
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .intro h4 {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    font-size: 1.4rem;
+  }
+
+  .enquiry {
+    font-size: 1.4rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .introSection {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .intro h4 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+  }
+
+  .enquiry {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
 }

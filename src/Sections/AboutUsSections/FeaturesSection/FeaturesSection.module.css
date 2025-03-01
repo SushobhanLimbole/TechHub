@@ -1,4 +1,4 @@
-.featuresSection {
+/* .featuresSection {
   width: 80vw;
   padding: 3% 0;
   display: flex;
@@ -56,13 +56,6 @@
   margin-bottom: 3vh;
 }
 
-/* .content {
-  padding: 0.5% 1.5%;
-  background-color: rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
-  margin-bottom: 2.5vh;
-} */
-
 .features ul li {
     margin-bottom: 2.5vh;
     font-family: "Open Sans", serif;
@@ -98,5 +91,199 @@
   }
   50% {
     transform: translateY(-15px);
+  }
+} */
+
+.featuresSection {
+  width: 80vw;
+  padding: 3% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25vh auto;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.blueGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: -5%;
+  z-index: -3;
+  filter: blur(100px);
+  background: var(--blue-glow);
+}
+
+.pinkGlow {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: -8%;
+  bottom: -10%;
+  z-index: -3;
+  filter: blur(120px);
+  background: var(--pink-glow);
+}
+
+.leftStars {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  right: -8%;
+  bottom: -15%;
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.rightStars {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: -8%;
+  top: -30%;
+  z-index: -2;
+}
+
+.features {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.055);
+  padding: 2%;
+  border-radius: 25px;
+}
+
+.features h1 {
+  font-family: "Open Sans", serif;
+  font-size: 3.5rem;
+  color: rgb(245, 207, 128);
+  margin-bottom: 3vh;
+}
+
+.features ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.5vh;
+}
+
+.features ul li {
+  font-family: "Open Sans", serif;
+  font-size: 1.8rem;
+  color: var(--title-color);
+  word-spacing: 0.3rem;
+  font-weight: 500;
+}
+
+.features ul li::marker {
+  color: rgb(245, 207, 128);
+}
+
+.features ul span {
+  font-family: "Open Sans", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(245, 207, 128);
+}
+
+.pic {
+  width: 30%;
+  height: 35vh;
+  object-fit: contain;
+  position: relative;
+  animation: JumpAnimate 1.5s infinite ease-in-out;
+}
+
+@keyframes JumpAnimate {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .featuresSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .features {
+    width: 90%;
+  }
+  
+  .features h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .features ul li {
+    font-size: 1.6rem;
+  }
+
+  .features ul li span{
+    font-size: 1.6rem;
+  }
+
+  .pic {
+    width: 35%;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .blueGlow {
+    top: -20%;
+  }
+
+  .rightStars {
+    background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .features h1 {
+    font-size: 2.5rem;
+  }
+
+  .features ul li {
+    font-size: 1.4rem;
+  }
+
+  .pic {
+    width: 50%;
+  }
+
+  .pinkGlow,
+  .blueGlow {
+    filter: blur(80px);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .featuresSection {
+    width: 90vw;
+  }
+
+  .features h1 {
+    font-size: 2.2rem;
+  }
+
+  .features ul li {
+    font-size: 1.2rem;
+  }
+
+  .pic {
+    width: 60%;
+  }
+
+  .pinkGlow,
+  .blueGlow {
+    filter: blur(70px);
   }
 }

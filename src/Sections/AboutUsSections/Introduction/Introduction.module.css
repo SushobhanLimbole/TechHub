@@ -1,11 +1,12 @@
 .introductionSection {
-  width: 80vw;
+  width: 90vw;
   padding: 3% 5%;
   margin: 10vh auto;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: start;
+  flex-wrap: wrap;
 }
 
 .blueGlow {
@@ -116,6 +117,7 @@
   font-size: 1.6rem;
   word-spacing: 0.2rem;
   font-family: "Open Sans", serif;
+  text-align: justify;
 }
 
 @keyframes GlowAnimate {
@@ -139,5 +141,152 @@
     right: -1px;
     bottom: -1px;
     filter: blur(10px);
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .introductionSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card {
+    width: 50%;
+    margin-bottom: 5vh;
+  }
+
+  .profilePhoto {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .intro {
+    width: 80%;
+  }
+
+  .intro h1 {
+    font-size: 3rem;
+  }
+
+  .intro p {
+    font-size: 1.4rem;
+  }
+
+  .socialMedia h3 {
+    font-size: 1.8rem;
+  }
+
+  .socialMedia img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .blueGlow,
+  .pinkGlow,
+  .leftStars,
+  .rightStars {
+    width: 55%;
+    height: 70%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .introductionSection {
+    width: 100%;
+    padding: 5%;
+  }
+
+  .card {
+    width: 40%;
+  }
+
+  .profilePhoto {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .intro {
+    width: 90%;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+  }
+
+  .socialMedia h3 {
+    font-size: 1.6rem;
+  }
+
+  .socialMedia img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .blueGlow,
+  .pinkGlow {
+    width: 40%;
+    height: 50%;
+    filter: blur(80px);
+  }
+
+  .leftStars,
+  .rightStars {
+    width: 60%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 50%;
+  }
+
+  .profilePhoto {
+    height: 50vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .card {
+    width: 60%;
+  }
+
+  .profilePhoto {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .blueGlow,
+  .pinkGlow {
+    width: 30%;
+    height: 50%;
+    filter: blur(60px);
+  }
+
+  .leftStars,
+  .rightStars {
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 70%;
+  }
+
+  .profilePhoto {
+    height: 50vh;
+    width: 100%;
   }
 }

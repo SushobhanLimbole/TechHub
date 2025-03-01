@@ -21,7 +21,7 @@ export default function Introduction() {
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius deserunt error repellat soluta commodi totam quas sit blanditiis dolorum quia, aperiam magnam voluptatem non architecto id similique, dolore qui!
                     Voluptate, quisquam! Officia aperiam, expedita illo unde architecto nemo? Laudantium deserunt maxime, ea inventore corrupti rem quo excepturi repellat nihil earum distinctio sequi, aperiam illo neque libero fuga rerum nesciunt?
-                    Ea consequatur beatae impedit. Ad ea, vel iusto maiores, quas consequuntur rerum molestias dolorum optio provident consectetur fugiat ipsam! Corrupti, quam. Recusandae cumque possimus fuga laborum voluptatem enim, assumenda.<br />
+                    Ea consequatur beatae impedit. Ad ea, vel iusto maiores, quas consequuntur rerum molestias dolorum optio provident consectetur fugiat ipsam! Corrupti, quam. Recusandae cumque possimus fuga laborum voluptatem enim, assumenda.
                     Aspernatur in enim eveniet consequatur voluptatibus maxime labore aliquam illum ut. Ea laboriosam delectus consectetur consequuntur fuga earum unde officia perferendis laborum. Porro quibusdam vitae quod vel iste fugiat quia.
                     Eos culpa quidem, illo quia animi non quibusdam consequatur laborum, dolorem libero reprehenderit maiores cum maxime nihil molestias? Fuga cumque error illo cupiditate, aut est quasi amet veniam soluta alias.
                     Non, facere ducimus. Ea aliquid, commodi numquam natus error sint expedita animi consequatur, ex voluptas ab odit sed voluptate optio reprehenderit voluptatem dolorem cupiditate minima, non debitis. Asperiores, hic! Iusto.

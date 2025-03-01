@@ -1,10 +1,40 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import TestimonialsSlider from '../../../Components/TestimonialsSlider/TestimonialsSlider';
 import testimonialsStyles from './TestimonialsSection.module.css';
+import MobTestimonialsSlider from "../../../Components/TestimonialsSlider/MobTestimonialsSlider";
 
 export default function Testimonials() {
+
   const containerRef = useRef(null);
   const cursorRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1000); // Adjust breakpoint as needed
+    };
+
+    const handleTouchOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        resetEffects();
+      }
+    };
+
+    // Initial setup
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    if (isMobile) {
+      document.addEventListener("touchstart", handleTouchOutside);
+    }
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      document.removeEventListener("touchstart", handleTouchOutside);
+    };
+  }, [isMobile]);
+
 
   const handleMouseMove = (e, containerRef, cursorRef) => {
     if (containerRef.current && cursorRef.current) {
@@ -55,12 +85,22 @@ export default function Testimonials() {
   };
 
   const handleMouseLeave = (containerRef, cursorRef) => {
-    if (cursorRef.current) {
+    if (cursorRef.current && !isMobile) {
       cursorRef.current.style.visibility = "hidden"; // Hide the cursor
-      containerRef.current.className = `${testimonialsStyles.testimonials} cursor-section`;
+      containerRef.current.className = `cursor-section ${testimonialsStyles.testimonials}`;
+    }
+    if (containerRef.current && !isMobile) {
+      containerRef.current.style.transform = "rotateX(0) rotateY(0)"; // Reset tilt
+    }
+  }
+
+  const resetEffects = () => {
+    if (cursorRef.current) {
+      cursorRef.current.style.visibility = "hidden";
     }
     if (containerRef.current) {
-      containerRef.current.style.transform = "rotateX(0) rotateY(0)"; // Reset tilt
+      containerRef.current.className = `cursor-section ${testimonialsStyles.testimonials}`;
+      containerRef.current.style.transform = "rotateX(0) rotateY(0)";
     }
   };
 
@@ -77,7 +117,11 @@ export default function Testimonials() {
       <div className={`cursor ${testimonialsStyles.cursorColor}`} ref={cursorRef}></div>
       <h1 className={testimonialsStyles.testimonialsHeader}>What our Student Says</h1>
       <h2 className={testimonialsStyles.tagline}>Discover inspiration and insights through recent reviews from our students. </h2>
-      <TestimonialsSlider contents={contents} />
+      {
+        isMobile
+          ? <MobTestimonialsSlider contents={contents} />
+          : <TestimonialsSlider contents={contents} />
+      }
     </div>
   );
 }

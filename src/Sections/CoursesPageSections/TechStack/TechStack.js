@@ -1,20 +1,29 @@
 import styles from './TechStack.module.css';
 import demoPic from '../../../Assets/html_logo.png';
+import CourseSyllabus from '../CourseSyllabus/CourseSyllabus';
+import { useState } from 'react';
 
-export default function TechStack() {
+export default function TechStack({ techStack = [] }) {
 
-    const demo = ['HTML', 'CSS', 'Javascript', 'ReactJs', 'Python'];
+    const [selectedIndex,setIndex] = useState(0);
+
+    function handleSelection(index) {
+        setIndex(index);
+    }
 
     return (
-        <div className={styles.techStack}>
-            {
-                demo.map((e) => (
-                    <div className={styles.card}>
-                        <img src={demoPic} alt='logo' />
-                        <h3>{e}</h3>
-                    </div>
-                ))
-            }
-        </div>
+        <section className={styles.infoSection}>
+            <div className={styles.techStack}>
+                {
+                    techStack.map((ele,index) => (
+                        <div onClick={() => handleSelection(index)} className={ `${styles.card} ${index === selectedIndex ? styles.active : ''}`}>
+                            <img src={demoPic} alt='logo' />
+                            <h3>{ele.techName}</h3>
+                        </div>
+                    ))
+                }
+            </div>
+            <CourseSyllabus techName={techStack[selectedIndex].techName} syllabus={techStack[selectedIndex].syllabus}/>
+        </section>
     );
 }

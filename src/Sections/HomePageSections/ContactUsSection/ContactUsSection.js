@@ -1,9 +1,37 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from './ContactUsSection.module.css';
 
 export default function ContactUs() {
+
     const containerRef = useRef(null);
     const cursorRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 850); // Adjust breakpoint as needed
+        };
+
+        const handleTouchOutside = (e) => {
+            if (containerRef.current && !containerRef.current.contains(e.target)) {
+                resetEffects();
+            }
+        };
+
+        // Initial setup
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        if (isMobile) {
+            document.addEventListener("touchstart", handleTouchOutside);
+        }
+
+        // Cleanup function
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            document.removeEventListener("touchstart", handleTouchOutside);
+        };
+    }, [isMobile]);
 
     const handleMouseMove = (e, containerRef, cursorRef) => {
         if (containerRef.current && cursorRef.current) {
@@ -56,10 +84,20 @@ export default function ContactUs() {
     const handleMouseLeave = (containerRef, cursorRef) => {
         if (cursorRef.current) {
             cursorRef.current.style.visibility = "hidden"; // Hide the cursor
-            containerRef.current.className = `${styles.contactUs} cursor-section`;
+            containerRef.current.className = `cursor-section ${styles.contactUs}`;
         }
         if (containerRef.current) {
             containerRef.current.style.transform = "rotateX(0) rotateY(0)"; // Reset tilt
+        }
+    };
+
+    const resetEffects = () => {
+        if (cursorRef.current) {
+            cursorRef.current.style.visibility = "hidden";
+        }
+        if (containerRef.current) {
+            containerRef.current.className = `cursor-section ${styles.contactUs}`;
+            containerRef.current.style.transform = "rotateX(0) rotateY(0)";
         }
     };
 
@@ -82,7 +120,7 @@ export default function ContactUs() {
                 </div>
                 <div className={styles.content}>
                     <h1><svg className={styles.callLogo} xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" /></svg> Call Number</h1>
-                    <p className={styles.call}>0000000000</p>
+                    <a href="tel:+917620633569" className={styles.call}>7620633569</a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 .carousel {
   width: 50%;
   max-width: 800px;
-  max-height: 600px;
+  min-width: 400px;
   height: 100%;
   position: relative;
   display: flex;
@@ -45,9 +45,9 @@
   right: -1px;
   bottom: -1px;
   background: linear-gradient(to bottom, #e6b7fe, #5049c2 20%, #5993d4);
-  z-index: -2; /* Push shadow behind the box */
-  filter: blur(15px); /* Blurs the shadow to make it realistic */
-  border-radius: 15px; /* Matches the box's rounded corners */
+  z-index: -2; 
+  filter: blur(15px); 
+  border-radius: 15px; 
 }
 
 .card img {
@@ -82,7 +82,7 @@
   z-index: 0;
 }
 
-/* .control {
+.control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -101,4 +101,23 @@
 
 .control.next {
   right: 20px;
-} */
+}
+
+@media only screen and (max-width: 1250px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .card {
+    width: 55%;
+  }
+}
+

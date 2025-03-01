@@ -12,12 +12,12 @@
 .footerLogo {
   height: 8vh;
   width: 15vw;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .quickLinks h1 {
   color: var(--title-color);
-  font-family: 'Open Sans',serif;
+  font-family: "Open Sans", serif;
 }
 
 .quickLinks ul {
@@ -35,12 +35,12 @@
   color: var(--tagline-color);
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  font-family: 'Open Sans',serif;
+  font-family: "Open Sans", serif;
 }
 
 .contactColumn h1 {
   color: var(--title-color);
-  font-family: 'Open Sans',serif;
+  font-family: "Open Sans", serif;
 }
 
 .mailLogo {
@@ -53,12 +53,87 @@
   text-decoration: none;
   color: var(--tagline-color);
   font-size: 1.8rem;
-  font-family: 'Open Sans',serif;
+  font-family: "Open Sans", serif;
 }
 
 .copyright {
   margin-top: 10vh;
   text-align: center;
   color: var(--title-color);
-  font-family: 'Open Sans',serif;
+  font-family: "Open Sans", serif;
+}
+
+@media (max-width: 900px) {
+  .innerFooterSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerLogo {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 2vh;
+  }
+
+  .quickLinks,
+  .contactColumn {
+    width: 80%;
+    margin-top: 2vh;
+  }
+
+  .quickLinks ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quickLinks ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  .quickLinks ul li a,
+  .contactColumn a {
+    font-size: 1.5rem;
+  }
+
+  .mailLogo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .copyright {
+    margin-top: 5vh;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 5vh 0;
+  }
+
+  .footerLogo {
+    width: 30vw;
+  }
+
+  .quickLinks ul li a,
+  .contactColumn a {
+    font-size: 1.3rem;
+  }
+
+  .mailLogo {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .footerLogo {
+    width: 40vw;
+  }
 }

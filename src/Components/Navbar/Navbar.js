@@ -1,16 +1,46 @@
 import { Link } from 'react-router-dom';
-import navbarStyles from './Navbar.module.css';
+import styles from './Navbar.module.css';
+import { useEffect, useState } from 'react';
+import MobileNavbar from './MobileNavbar';
 
 export default function Navbar() {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 700); // Adjust breakpoint as needed
+        };
+
+        // Initial check on component mount
+        handleResize();
+
+        // Event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
-        <div className={navbarStyles.navbar}>
-            <Link to={'/'}><div className={navbarStyles.logo}></div></Link>
-            <ul className={navbarStyles.navContent}>
-                <li className={navbarStyles.navLinks}><Link to={'/courses'}>Courses</Link></li>
-                <li className={navbarStyles.navLinks}><Link to={'/'}>Enquiry</Link></li>
-                <li className={navbarStyles.navLinks}><Link to={'/about-us'}>About Us</Link></li>
-                <li className={navbarStyles.navLinks}><a href='/#contact-us'>Contact Us</a></li>
-            </ul>
-        </div>
+        <>
+            {
+                isMobile
+                    ? <MobileNavbar />
+                    : <nav className={styles.navbar}>
+                        <div className={styles.logoNavSection}>
+                            <Link to={'/'}><div className={styles.logo}></div></Link>
+                        </div>
+                        <ul className={styles.navLinks}>
+                            <li><Link to={"/courses"}>Courses</Link></li>
+                            <li><Link to={"/"}>Enquiry</Link></li>
+                            <li><Link to={"/about-us"}>About Us</Link></li>
+                            <li><Link to={"/#contact-us"}>Contact Us</Link></li>
+                        </ul>
+                    </nav>
+            }
+        </>
     );
 }

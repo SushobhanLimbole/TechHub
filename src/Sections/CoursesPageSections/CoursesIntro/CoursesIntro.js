@@ -5,7 +5,7 @@ export default function CoursesIntro({ content }) {
         <section className={styles.introSection}>
             <div className={styles.blueGlow}></div>
             <div className={styles.pinkGlow}></div>
-            <div className={styles.leftStars}></div>
+            <div className={styles.leftStars}></div>    
             <img className={styles.card} src={content.image} alt={content.title}/>
             <div className={styles.intro}>
                 <h1 className={styles.title}>{content.title}</h1>

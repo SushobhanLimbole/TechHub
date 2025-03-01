@@ -1,7 +1,7 @@
 .contactUs {
   width: 80vw;
   margin: 20vh auto;
-  padding: 3% 5%;
+  padding: 3rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@
   font-family: "Open Sans", serif;
   font-weight: 400;
   color: var(--tagline-color);
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .map {
@@ -38,12 +38,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1vw;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .content {
   width: 49%;
-  padding: 1.5vh 1.2vw;
+  min-width: min-content;
+  padding: 1rem 1.2rem;
   background-color: rgba(255, 255, 255, 0.121);
   border-radius: 15px;
 }
@@ -58,10 +60,11 @@
   text-decoration: none;
 }
 
-.call{
-    color: var(--tagline-color);
+.call {
+  color: var(--tagline-color);
   font-size: 1.8rem;
   margin-bottom: 0;
+  text-decoration: none;
 }
 
 .mailLogo,
@@ -117,4 +120,105 @@
   border-right: 2px solid;
   border-bottom-color: var(--border-green);
   border-right-color: var(--border-green);
+}
+
+@media only screen and (max-width: 1200px) {
+  .contactUsHeader {
+    font-size: 3.5rem;
+  }
+
+  .tagline,
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .content {
+    width: inherit;
+  }
+
+  .mailLogo,
+  .callLogo {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .email,
+  .call {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+
+  .map,
+  .contentContainer {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .contactUsHeader {
+    font-size: 3rem;
+  }
+
+  .tagline,
+  .content h1 {
+    font-size: 1.4rem;
+  }
+
+  .map,
+  .contentContainer {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contactUs {
+    width: 90vw;
+  }
+
+  .contactUsHeader {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .content h1 {
+    font-size: 1.4rem;
+  }
+
+  .email,
+  .call {
+    font-size: 1.2rem;
+  }
+
+  .map,
+  .contentContainer {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .contactUsHeader {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .map,
+  .contentContainer {
+    width: 80vw;
+  }
 }

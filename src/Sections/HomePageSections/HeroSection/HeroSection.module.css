@@ -1,7 +1,8 @@
-.heroSection {
+/* .heroSection {
   width: 100vw;
   height: 80vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   position: relative;
 }
@@ -29,10 +30,10 @@
 
 .tagSection {
   width: 50%;
+  min-width: 300px;
   height: 100%;
   display: flex;
   justify-content: center;
-  /* background-color: red; */
 }
 
 .tagline {
@@ -42,7 +43,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
 }
 
 .tagline h1 {
@@ -51,12 +51,187 @@
   font-size: 5.5rem;
   margin-bottom: 10px;
   font-weight: 700;
-  /* background-color: tan; */
 }
 
 .tagline h2 {
   font-family: "Open Sans", serif;
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.674);
-  /* background-color: aliceblue; */
+}
+
+@media only screen and (max-width: 1160px) {
+
+  .heroSection {
+    width: 100vw;
+    flex-direction: row-reverse;
+    height: 50vh;
+  }
+
+
+  .tagline {
+    width: 80%;
+  }
+
+  .tagline h1 {
+    font-size: 4.5rem;
+  }
+
+  .tagline h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .tagline {
+    width: 100%;
+  }
+} */
+
+.heroSection {
+  width: 100vw;
+  min-height: 70vh; 
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.heroBlueGlow {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: -5%;
+  z-index: -3;
+  filter: blur(100px);
+  background: var(--blue-glow);
+}
+
+.heroStars {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: -5%;
+  z-index: -2;
+  background-image: url("../../../Assets/stars.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.tagSection {
+  width: 50%;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.tagline {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tagline h1 {
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tagline h2 {
+  font-family: "Open Sans", serif;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 960px) {
+
+  .tagline h1 {
+    font-size: 4.2rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 0px;
+    height: min-content;
+  }
+
+  .tagSection {
+    width: 60%;
+    margin: 4rem 0;
+  }
+
+  .tagline {
+    width: 100%;
+  }
+
+  .tagline h1 {
+    font-size: 4rem;
+  }
+
+  .tagline h2 {
+    font-size: 2rem;
+  }
+
+  .heroBlueGlow {
+    width: 60%;
+    left: 0;
+  }
+
+  .heroStars {
+    width: 60%;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tagline h1 {
+    font-size: 3.5rem;
+  }
+
+  .tagline h2 {
+    font-size: 1.5rem;
+  }
+
+  .heroBlueGlow,
+  .heroStars {
+    display: block;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  .tagSection {
+    width: 100%;
+  }
+
+  .tagline {
+    width: 90%;
+  }
+
+  .tagline h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline h2 {
+    font-size: 1.1rem;
+  }
+
+  .heroBlueGlow,
+  .heroStars {
+    display: block;
+    width: 70%;
+  }
 }

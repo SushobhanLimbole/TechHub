@@ -1,7 +1,7 @@
 .testimonials {
   width: 80vw;
   margin: 20vh auto;
-  padding: 3% 5%;
+  padding: 3rem 5rem;
 }
 
 .cursorColor {
@@ -70,4 +70,37 @@
   border-right: 2px solid;
   border-bottom-color: var(--border-blue);
   border-right-color: var(--border-blue);
+}
+
+@media only screen and (max-width: 1200px) {
+  .testimonialsHeader {
+    font-size: 3.5rem;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonialsHeader {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .testimonials {
+    width: 90vw;
+  }
+
+  .testimonialsHeader {
+    font-size: 2.5rem;
+  }
+  .tagline {
+    font-size: 1.2rem;
+  }
 }

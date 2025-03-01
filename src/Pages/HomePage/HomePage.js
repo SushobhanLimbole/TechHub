@@ -5,7 +5,6 @@ import ContactUs from "../../Sections/HomePageSections/ContactUsSection/ContactU
 
 export default function HomePage() {
 
-    // images array for carousel
     const images = [
         "https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80",
         "https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",

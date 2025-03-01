@@ -7,6 +7,7 @@ export default function FeaturesSection() {
             <div className={styles.blueGlow}></div>
             <div className={styles.pinkGlow}></div>
             <div className={styles.leftStars}></div>
+            <div className={styles.rightStars}></div>
             <div className={styles.features}>
                 <h1>What we Offer?</h1>
                 <ul>

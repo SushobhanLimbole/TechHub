@@ -1,7 +1,7 @@
 .courses {
   width: 80vw;
   margin: 20vh auto;
-  padding: 3% 5%;
+  padding: 3rem 5rem;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -79,4 +79,58 @@
   border-right: 2px solid;
   border-bottom-color: var(--border-purple);
   border-right-color: var(--border-purple);
+}
+
+@media only screen and (max-width: 1200px) {
+  .coursesSlider {
+    width: 55vw;
+  }
+
+  .coursesHeader {
+    font-size: 3.5rem;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .coursesSlider {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .coursesSlider {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .coursesHeader {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 1.4rem;
+  }
+
+  .coursesSlider {
+    width: 70vw;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .courses {
+    width: 90vw;
+  }
+
+  .coursesHeader {
+    font-size: 2.5rem;
+  }
+  .tagline {
+    font-size: 1.2rem;
+  }
 }
